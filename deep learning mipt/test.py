@@ -1,3 +1,6 @@
+import math
+
+
 def cumsum_and_erase(a, erase=1):
     ch = a[0]
     if ch != erase:
@@ -10,8 +13,12 @@ def cumsum_and_erase(a, erase=1):
             B.append(ch)
     return B
 
-A = [5, 1, 4, 5, 14]
-B = cumsum_and_erase(A, erase=10)
-print(B)
 
+def f(x):
+    return (math.tan(x) * math.log(math.cos(x**2) + 1))
+
+
+x = 0
+x0 = 10**(-6)
+print(f'{(f(x + x0) - f(x)) / x0: .2f}')
 
